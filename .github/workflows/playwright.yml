@@ -25,6 +25,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+        # Add this step to install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install
+
       # Run Playwright tests with @desktop tag
       - name: Run Playwright Desktop Tests
         run: npx playwright test --grep "@desktop"
@@ -44,6 +48,10 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+        # Add this step to install Playwright browsers
+      - name: Install Playwright Browsers
+        run: npx playwright install
 
       # Run Playwright tests with @mobile tag
       - name: Run Playwright Mobile Tests
